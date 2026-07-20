@@ -58,4 +58,4 @@ function todayStr() {
   return new Date().toISOString().split('T')[0];
 }
 
-module.exports = { readDb, writeDb, todayStr };
+module.exports = { readDb, writeDb, todayStr, dbPath };

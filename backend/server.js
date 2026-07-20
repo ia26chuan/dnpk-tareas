@@ -4,7 +4,7 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const path = require('path');
-const { readDb, writeDb, todayStr } = require('./db');
+const { readDb, writeDb, todayStr, dbPath } = require('./db');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -610,6 +610,17 @@ app.put('/api/coordinator/employees/:id/password', authenticateToken, (req, res)
   employee.plainPassword = newPassword;
   writeDb(db);
   res.json({ success: true, message: 'Contraseña actualizada' });
+});
+
+// ── ADMIN: Reset database ──────────────────────────────
+app.post('/api/admin/reset-db', authenticateToken, requireAdmin, (req, res) => {
+  try {
+    const fs = require('fs');
+    fs.unlinkSync(dbPath);
+    res.json({ success: true, message: 'Base de datos eliminada. Se reiniciara con datos iniciales.' });
+  } catch (err) {
+    res.json({ success: true, message: 'Base de datos ya estaba limpia.' });
+  }
 });
 
 // ── SPA fallback ──────────────────────────────────────
