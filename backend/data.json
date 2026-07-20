@@ -3,7 +3,7 @@
     {
       "id": "admin-id",
       "username": "admin@dnpk.com",
-      "passwordHash": "$2a$08$mNtAYk6z5XI.QJlq3Fghee0WLCDxvz.PZKTp4hu.OVRQIflpeEb8S",
+      "passwordHash": "$2a$08$1J58.C4f3IZ6cqWcaIkt1.xKhK49sT1Mo9iTux00gRRym/orlzREi",
       "plainPassword": "Dnpk@2026",
       "role": "admin",
       "groupId": null
@@ -11,7 +11,7 @@
     {
       "id": "juan-id",
       "username": "juan@dnpk.com",
-      "passwordHash": "$2a$08$71poYmg9TfoB0t3Gq8.FKu1MGNkKaFx0C7CjlLT6chq5FiVrZaJ0G",
+      "passwordHash": "$2a$08$2ImqqVEbycjJRg8oFGNHm..XIkPXsfBehc3HBycmJsYUaHiTJmio2",
       "plainPassword": "Dnpk@Ju4n",
       "role": "user",
       "groupId": "grupo-deposito"
@@ -19,7 +19,7 @@
     {
       "id": "maria-id",
       "username": "maria@dnpk.com",
-      "passwordHash": "$2a$08$V2Y3vXBls/PPaynC5m8WfeHhgXdC9EpMExhmSWzte5mn9MXN2L7XC",
+      "passwordHash": "$2a$08$eo8ypleAagCwIBUVVDNhi.mmNpO454C0iWGKfw..69aXSObJb8hDy",
       "plainPassword": "Dnpk@M4ria",
       "role": "user",
       "groupId": "grupo_barra"
@@ -27,10 +27,10 @@
     {
       "id": "user_coord",
       "username": "coo@dnpk.com",
-      "passwordHash": "$2a$08$7O5rnC3sgBMNv3cehPoFi.p6/4Zz8IiJucfxAm7ZJPwUHoyWtFxYS",
+      "passwordHash": "$2a$08$ulvzjVOoM/oDdSqKzyxGeOKjiMqNk2k5H8x/lIHr23yKeKDdssGQ6",
       "plainPassword": "Coo@2026",
       "role": "coordinator",
-      "groupId": "grupo_deposito"
+      "groupId": "grupo-deposito"
     }
   ],
   "groups": [
