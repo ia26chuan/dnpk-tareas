@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "=== Cleaning old build ==="
+rm -rf backend/public/assets
+
 echo "=== Building frontend ==="
 cd frontend
 npm install --include=dev
@@ -12,3 +15,4 @@ cd ..
 
 echo "=== Build complete ==="
 ls -la backend/public/
+ls -la backend/public/assets/
