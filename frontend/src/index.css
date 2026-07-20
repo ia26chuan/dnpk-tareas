@@ -364,9 +364,7 @@ body {
 .app-title {
   font-size: 1.25rem;
   font-weight: 700;
-  background: linear-gradient(to right, #c4b5fd, #7c3aed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 /* Main Content Area */
