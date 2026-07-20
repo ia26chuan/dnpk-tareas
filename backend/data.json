@@ -1,0 +1,178 @@
+{
+  "users": [
+    {
+      "id": "admin-id",
+      "username": "admin@dnpk.com",
+      "passwordHash": "$2a$08$zyp1U5nyrAvW/4RzpDuIoeiZmTfwLfmvufKPl4AihJS5iGQpdeAxu",
+      "plainPassword": "Dnpk@2026",
+      "role": "admin",
+      "groupId": null
+    },
+    {
+      "id": "juan-id",
+      "username": "juan@dnpk.com",
+      "passwordHash": "$2a$08$lUqCR5ry/cnqVDU2inh8Tuflmzwa.jhPryCnClgBMVExpQwKLoCS.",
+      "plainPassword": "Park740Dune",
+      "role": "user",
+      "groupId": "grupo-deposito"
+    },
+    {
+      "id": "maria-id",
+      "username": "maria@dnpk.com",
+      "passwordHash": "$2a$08$xu9rxS51q1TL64zjZs6Vb.H2vp2x1.eVOW6yIM8dy.cFnth.RqM8S",
+      "plainPassword": "Dnpk@M4ria",
+      "role": "user",
+      "groupId": "grupo_1784441100477_nwioj"
+    },
+    {
+      "id": "user_1784523264518_c97b3",
+      "username": "coo@dnpk.com",
+      "passwordHash": "$2a$08$ZZIPks0Ul7tFRMUM.F.C.OcYFhvnSNUN0nrYe5fwOrFnHj.5xjxBW",
+      "plainPassword": "Coo@2026",
+      "role": "coordinator",
+      "groupId": "grupo_1784523811927_smxpa"
+    }
+  ],
+  "groups": [
+    {
+      "id": "grupo-deposito",
+      "name": "DEPOSITO"
+    },
+    {
+      "id": "grupo_1784441100477_nwioj",
+      "name": "BARRA"
+    },
+    {
+      "id": "grupo_1784523811927_smxpa",
+      "name": "COORDINADORES"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-1",
+      "groupId": "grupo-deposito",
+      "text": "Firmar planilla de ingreso",
+      "type": "entrada",
+      "order": 1
+    },
+    {
+      "id": "task-2",
+      "groupId": "grupo-deposito",
+      "text": "Revisar equipo de protección personal (EPP)",
+      "type": "entrada",
+      "order": 2
+    },
+    {
+      "id": "task-3",
+      "groupId": "grupo-deposito",
+      "text": "Controlar orden de trabajo del día",
+      "type": "entrada",
+      "order": 3
+    },
+    {
+      "id": "task-4",
+      "groupId": "grupo-deposito",
+      "text": "Limpieza y orden del puesto de trabajo",
+      "type": "salida",
+      "order": 4
+    },
+    {
+      "id": "task-5",
+      "groupId": "grupo-deposito",
+      "text": "Firmar planilla de salida",
+      "type": "salida",
+      "order": 5
+    },
+    {
+      "id": "task_1784441123929_5g7u2",
+      "groupId": "grupo_1784441100477_nwioj",
+      "text": "tarea 1",
+      "type": "entrada",
+      "order": 1
+    },
+    {
+      "id": "task_1784441131750_ejksp",
+      "groupId": "grupo_1784441100477_nwioj",
+      "text": "tarea 2",
+      "type": "entrada",
+      "order": 2
+    },
+    {
+      "id": "task_1784441138613_u4clj",
+      "groupId": "grupo_1784441100477_nwioj",
+      "text": "tarea 1",
+      "type": "salida",
+      "order": 3
+    },
+    {
+      "id": "task_1784523837535_3hinm",
+      "groupId": "grupo_1784523811927_smxpa",
+      "text": "Revisar tareas de BARRA",
+      "type": "entrada",
+      "order": 1
+    },
+    {
+      "id": "task_1784523849786_fvexk",
+      "groupId": "grupo_1784523811927_smxpa",
+      "text": "Revisar tareas de BARRA",
+      "type": "salida",
+      "order": 2
+    },
+    {
+      "id": "task_1784523863855_74u5h",
+      "groupId": "grupo_1784523811927_smxpa",
+      "text": "Revisar tareas de DEPOSITO",
+      "type": "salida",
+      "order": 3
+    },
+    {
+      "id": "task_1784523867959_9y8i1",
+      "groupId": "grupo_1784523811927_smxpa",
+      "text": "Revisar tareas de DEPOSITO",
+      "type": "entrada",
+      "order": 4
+    }
+  ],
+  "taskHistory": [
+    {
+      "id": "hist_1784521122144_6s8iq",
+      "taskId": "task-1",
+      "userId": "juan-id",
+      "date": "2026-07-20",
+      "completed": true,
+      "completedAt": "2026-07-20T04:18:42.144Z"
+    },
+    {
+      "id": "hist_1784521122591_fua50",
+      "taskId": "task-2",
+      "userId": "juan-id",
+      "date": "2026-07-20",
+      "completed": true,
+      "completedAt": "2026-07-20T04:18:42.591Z"
+    },
+    {
+      "id": "hist_1784521123053_qknky",
+      "taskId": "task-3",
+      "userId": "juan-id",
+      "date": "2026-07-20",
+      "completed": true,
+      "completedAt": "2026-07-20T04:18:43.053Z"
+    },
+    {
+      "id": "hist_1784521124375_9nnwa",
+      "taskId": "task-4",
+      "userId": "juan-id",
+      "date": "2026-07-20",
+      "completed": true,
+      "completedAt": "2026-07-20T04:18:44.375Z"
+    },
+    {
+      "id": "hist_1784521124790_zfo83",
+      "taskId": "task-5",
+      "userId": "juan-id",
+      "date": "2026-07-20",
+      "completed": true,
+      "completedAt": "2026-07-20T04:18:44.790Z"
+    }
+  ]
+}

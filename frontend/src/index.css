@@ -1,0 +1,991 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* HSL Color System - Premium Dark Theme */
+  --background: 224 71% 4%;
+  --card: 224 71% 7%;
+  --card-hover: 224 71% 10%;
+  --primary: 247 95% 70%;       /* Rich violet/indigo */
+  --primary-glow: rgba(139, 92, 246, 0.15);
+  --primary-foreground: 0 0% 100%;
+  --secondary: 222 47% 12%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 224 71% 12%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 32% 17%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --success: 142 70% 50%;
+  --success-glow: rgba(16, 185, 129, 0.15);
+  --success-foreground: 0 0% 100%;
+  --border: 224 71% 12%;
+  --input: 224 71% 12%;
+  --ring: 247 95% 70%;
+  --radius: 16px;
+  
+  color-scheme: dark;
+}
+
+.light-theme {
+  --background: 220 14% 96%;
+  --card: 0 0% 100%;
+  --card-hover: 220 14% 93%;
+  --primary: 247 95% 55%;
+  --primary-glow: rgba(139, 92, 246, 0.08);
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 91%;
+  --secondary-foreground: 224 20% 15%;
+  --muted: 220 14% 91%;
+  --muted-foreground: 224 15% 35%;
+  --accent: 220 14% 89%;
+  --accent-foreground: 224 20% 15%;
+  --destructive: 0 84% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142 65% 38%;
+  --success-glow: rgba(16, 185, 129, 0.08);
+  --success-foreground: 0 0% 100%;
+  --border: 220 14% 87%;
+  --input: 220 14% 91%;
+  --ring: 247 95% 55%;
+  color-scheme: light;
+}
+
+.light-theme body {
+  background-color: #d1d5db;
+  color: #1f2937;
+}
+
+.light-theme .app-container {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  color: #1f2937;
+}
+
+.light-theme .app-header {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+  border-bottom-color: #d1d5db;
+}
+
+.light-theme .app-title {
+  background: linear-gradient(to right, #1e1b4b, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .app-content {
+  color: #1f2937;
+}
+
+.light-theme .profile-card,
+.light-theme .admin-panel-box,
+.light-theme .user-status-card,
+.light-theme .task-item,
+.light-theme .task-admin-item {
+  background-color: #ffffff;
+  border-color: #d1d5db;
+  color: #1f2937;
+}
+
+.light-theme .task-item:hover {
+  background-color: #f3f4f6;
+}
+
+.light-theme .task-item {
+  color: #1f2937;
+}
+
+.light-theme .profile-username,
+.light-theme .success-title {
+  color: #111827;
+}
+
+.light-theme .form-input,
+.light-theme .task-manager-select {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+.light-theme .form-input::placeholder,
+.light-theme .task-manager-select {
+  color: #6b7280;
+}
+
+.light-theme .form-label {
+  color: #4b5563;
+}
+
+.light-theme .login-title {
+  color: #111827;
+}
+
+.light-theme .login-subtitle {
+  color: #6b7280;
+}
+
+.light-theme .section-title {
+  color: #4b5563;
+}
+
+.light-theme .progress-header {
+  color: #4b5563;
+}
+
+.light-theme .progress-bar-bg {
+  background-color: #e5e7eb;
+}
+
+.light-theme .nav-item {
+  color: #6b7280;
+}
+
+.light-theme .admin-tabs {
+  background-color: #e5e7eb;
+}
+
+.light-theme .admin-tab-btn {
+  color: #6b7280;
+}
+
+.light-theme .admin-tab-btn.active {
+  background-color: #ffffff;
+  color: #111827;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.light-theme .locked-section {
+  background-color: rgba(243, 244, 246, 0.6);
+  border-color: #d1d5db;
+}
+
+.light-theme .locked-title {
+  color: #374151;
+}
+
+.light-theme .locked-description {
+  color: #6b7280;
+}
+
+.light-theme .locked-icon-container {
+  background-color: #e5e7eb;
+  color: #6b7280;
+}
+
+.light-theme .task-text {
+  color: #1f2937;
+}
+
+.light-theme .task-item.completed .task-text {
+  color: #9ca3af;
+}
+
+.light-theme .task-checkbox-container {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.light-theme .user-status-card:hover {
+  border-color: #7c3aed;
+}
+
+.light-theme .user-stat-row {
+  color: #4b5563;
+}
+
+.light-theme .status-badge.complete {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+
+.light-theme .status-badge.in-progress {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.light-theme .status-badge.not-started {
+  background-color: rgba(107, 114, 128, 0.12);
+  color: #6b7280;
+}
+
+.light-theme .task-details-view {
+  background-color: #f3f4f6;
+}
+
+.light-theme .detail-task-row {
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+.light-theme .detail-task-text {
+  color: #374151;
+}
+
+.light-theme .success-description {
+  color: #6b7280;
+}
+
+.light-theme .error-badge {
+  color: #dc2626;
+  background-color: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.15);
+}
+
+.light-theme .task-type-badge.entrada {
+  background-color: rgba(99, 102, 241, 0.12);
+  color: #4f46e5;
+}
+
+.light-theme .task-type-badge.salida {
+  background-color: rgba(236, 72, 153, 0.12);
+  color: #db2777;
+}
+
+.light-theme .user-item-row {
+  background-color: #f3f4f6;
+}
+
+.light-theme .btn-primary {
+  box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.2);
+}
+
+.light-theme input[type="date"] {
+  color: #111827;
+  color-scheme: light;
+}
+
+.light-theme .user-status-card div[style*="font-size: 0.75rem"],
+.light-theme .user-status-card div[style*="font-size:0.75rem"] {
+  color: #6b7280 !important;
+}
+
+.light-theme strong {
+  color: #111827;
+}
+
+.light-theme .admin-panel-box div[style*="color: #a78bfa"],
+.light-theme .admin-panel-box div[style*="color:#a78bfa"] {
+  color: #6d28d9 !important;
+}
+
+.light-theme .admin-panel-box div[style*="color: #9ca3af"] {
+  color: #6b7280 !important;
+}
+
+.light-theme .admin-panel-box span[style*="font-size: 0.7rem"],
+.light-theme .admin-panel-box span[style*="font-size:0.7rem"] {
+  color: #4b5563 !important;
+}
+
+.light-theme .detail-task-text,
+.light-theme .detail-status-ok {
+  color: #374151;
+}
+
+.light-theme .detail-status-ok {
+  color: #059669;
+}
+
+.light-theme .user-status-card div[style*="font-size: 0.8rem"] {
+  color: #4b5563 !important;
+}
+
+.light-theme .admin-panel-box label {
+  color: #374151;
+}
+
+.light-theme .admin-panel-box h3 {
+  color: #111827;
+}
+
+.light-theme .user-status-card span[style*="font-weight: 700"] {
+  color: #111827;
+}
+
+.light-theme .success-screen p {
+  color: #6b7280;
+}
+
+.light-theme .tasks-admin-list .task-admin-item span[style*="flex: 1"] {
+  color: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #030712;
+  color: hsl(210 40% 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* App Wrapper: Centers on PC, full screen on mobile */
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 481px) {
+  .app-container {
+    height: 850px;
+    border-radius: 28px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Header */
+.app-header {
+  padding: 20px 24px;
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.5) 0%, rgba(3, 7, 18, 0) 100%);
+  border-bottom: 1px solid hsl(var(--border));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ffffff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Main Content Area */
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Scrollbar styling */
+.app-content::-webkit-scrollbar {
+  width: 4px;
+}
+.app-content::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 2px;
+}
+
+/* Auth / Login styling */
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+  padding: 12px 32px 32px;
+  gap: 12px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-logo {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, #6d28d9 100%);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+}
+
+.login-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background-color: hsl(var(--secondary));
+  border: 1px solid hsl(var(--border));
+  color: white;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+.btn-danger {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.error-badge {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* User Profile & Progress Card */
+.profile-card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-username {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.profile-role {
+  font-size: 0.75rem;
+  background-color: hsl(var(--secondary));
+  padding: 4px 8px;
+  border-radius: 99px;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: hsl(var(--secondary));
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, hsl(var(--primary)) 0%, #10b981 100%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 99px;
+}
+
+/* Task Section Styling */
+.section-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Task Card */
+.task-item {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.task-item:hover {
+  background-color: hsl(var(--card-hover));
+}
+
+.task-checkbox-container {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 6px;
+  border: 2px solid hsl(var(--muted-foreground));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+.task-item.completed .task-checkbox-container {
+  background-color: hsl(var(--success));
+  border-color: hsl(var(--success));
+  box-shadow: 0 0 10px var(--success-glow);
+}
+
+.task-text {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: hsl(210 40% 98%);
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+
+.task-item.completed .task-text {
+  color: hsl(var(--muted-foreground));
+  text-decoration: line-through;
+}
+
+/* Locked Section */
+.locked-section {
+  border: 2px dashed hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(3, 7, 18, 0.4);
+  transition: all 0.3s ease;
+}
+
+.locked-icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 99px;
+  background-color: hsl(var(--muted));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(var(--muted-foreground));
+}
+
+.locked-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.locked-description {
+  font-size: 0.8rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.4;
+}
+
+/* Shake Animation for Locked Click feedback */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.shake {
+  animation: shake 0.25s ease-in-out;
+}
+
+/* Bottom Bar / Nav */
+.bottom-nav {
+  padding: 12px 24px 20px;
+  border-top: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+}
+
+.nav-item.active {
+  color: hsl(var(--primary));
+}
+
+/* Admin Dashboard CSS */
+.admin-tabs {
+  display: flex;
+  background-color: hsl(var(--secondary));
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.admin-tab-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.admin-tab-btn.active {
+  background-color: hsl(var(--card));
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Live Monitor Cards */
+.user-status-card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-status-card:hover {
+  border-color: hsl(var(--primary));
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 99px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.complete {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+}
+
+.status-badge.in-progress {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+}
+
+.status-badge.not-started {
+  background-color: rgba(107, 114, 128, 0.1);
+  color: #9ca3af;
+}
+
+.user-stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Admin CRUD UI */
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-panel-box {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.user-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: hsl(var(--secondary));
+  border-radius: 10px;
+}
+
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-manager-select {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: hsl(var(--secondary));
+  color: white;
+  border: 1px solid hsl(var(--border));
+  width: 100%;
+}
+
+.tasks-admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-admin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: hsl(var(--secondary));
+  border: 1px solid hsl(var(--border));
+  font-size: 0.85rem;
+}
+
+.task-admin-text {
+  flex: 1;
+  margin-right: 8px;
+  line-height: 1.4;
+}
+
+.task-type-badge {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.task-type-badge.entrada {
+  background-color: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+}
+
+.task-type-badge.salida {
+  background-color: rgba(236, 72, 153, 0.2);
+  color: #f472b6;
+}
+
+/* Success View for Employees */
+.success-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 32px;
+  text-align: center;
+  gap: 12px;
+}
+
+.success-icon-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 99px;
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 2px solid hsl(var(--success));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(var(--success));
+  box-shadow: 0 0 30px var(--success-glow);
+  animation: scale-up-pulse 2s infinite ease-in-out;
+}
+
+@keyframes scale-up-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.success-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.success-description {
+  font-size: 0.9rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+}
+
+.task-details-view {
+  background-color: hsl(var(--secondary));
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.detail-task-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.detail-task-row:last-child {
+  border-bottom: none;
+}
+.detail-task-text {
+  flex: 1;
+  text-align: left;
+  margin-right: 8px;
+}
+.detail-status-ok {
+  color: #34d399;
+  font-weight: bold;
+}
+.detail-status-pending {
+  color: hsl(var(--muted-foreground));
+}
+
+.password-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.password-value {
+  color: #e5e7eb;
+}
+
+.member-names {
+  font-size: 0.7rem;
+  color: #a78bfa;
+  margin-top: 2px;
+}
+
+.light-theme .password-label {
+  color: #6b7280;
+}
+
+.light-theme .password-value {
+  color: #111827;
+}
+
+.light-theme .member-names {
+  color: #6d28d9;
+}
+
+.light-theme .section-label {
+  color: #6d28d9;
+}
+
+.light-theme .detail-label {
+  color: #6d28d9;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #a78bfa;
+}

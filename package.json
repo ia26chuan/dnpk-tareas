@@ -1,0 +1,14 @@
+{
+  "name": "dnpk-tareas-cloud",
+  "version": "1.0.0",
+  "description": "Control de Tareas Diarias - DNPK (Cloud Version)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix backend",
+    "setup": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
