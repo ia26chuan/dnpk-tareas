@@ -3,7 +3,7 @@
     {
       "id": "admin-id",
       "username": "admin@dnpk.com",
-      "passwordHash": "$2a$08$1J58.C4f3IZ6cqWcaIkt1.xKhK49sT1Mo9iTux00gRRym/orlzREi",
+      "passwordHash": "$2a$08$Y1uzYkxcIJV6Zgx/1NiuLOSsJ.Jnk.PJ86V4O4.PRozbHQ7FuwdT2",
       "plainPassword": "Dnpk@2026",
       "role": "admin",
       "groupId": null
@@ -11,7 +11,7 @@
     {
       "id": "juan-id",
       "username": "juan@dnpk.com",
-      "passwordHash": "$2a$08$2ImqqVEbycjJRg8oFGNHm..XIkPXsfBehc3HBycmJsYUaHiTJmio2",
+      "passwordHash": "$2a$08$YJKbsNAdG6oJXFlNeVbil.H8yuppoRAvVRHgdis0teKp/aCUGvDZq",
       "plainPassword": "Dnpk@Ju4n",
       "role": "user",
       "groupId": "grupo-deposito"
@@ -19,18 +19,18 @@
     {
       "id": "maria-id",
       "username": "maria@dnpk.com",
-      "passwordHash": "$2a$08$eo8ypleAagCwIBUVVDNhi.mmNpO454C0iWGKfw..69aXSObJb8hDy",
+      "passwordHash": "$2a$08$KEzpSE1I2YfT70XwXAvpiOslWHWYgWeoFfULA8F2wiVfuqfKYerde",
       "plainPassword": "Dnpk@M4ria",
       "role": "user",
-      "groupId": "grupo_barra"
+      "groupId": "grupo_1784441100477_nwioj"
     },
     {
-      "id": "user_coord",
+      "id": "user_1784523264518_c97b3",
       "username": "coo@dnpk.com",
-      "passwordHash": "$2a$08$ulvzjVOoM/oDdSqKzyxGeOKjiMqNk2k5H8x/lIHr23yKeKDdssGQ6",
+      "passwordHash": "$2a$08$ji1idHkPzlXGwum2f5pxfuhqgX9ZUslntugs0BSbcNyEbStuBbYVC",
       "plainPassword": "Coo@2026",
       "role": "coordinator",
-      "groupId": "grupo-deposito"
+      "groupId": "grupo_1784523811927_smxpa"
     }
   ],
   "groups": [
@@ -39,8 +39,12 @@
       "name": "DEPOSITO"
     },
     {
-      "id": "grupo_barra",
+      "id": "grupo_1784441100477_nwioj",
       "name": "BARRA"
+    },
+    {
+      "id": "grupo_1784523811927_smxpa",
+      "name": "COORDINADORES"
     }
   ],
   "tasks": [
@@ -81,21 +85,21 @@
     },
     {
       "id": "task-6",
-      "groupId": "grupo_barra",
+      "groupId": "grupo_1784441100477_nwioj",
       "text": "tarea 1",
       "type": "entrada",
       "order": 1
     },
     {
       "id": "task-7",
-      "groupId": "grupo_barra",
+      "groupId": "grupo_1784441100477_nwioj",
       "text": "tarea 2",
       "type": "entrada",
       "order": 2
     },
     {
       "id": "task-8",
-      "groupId": "grupo_barra",
+      "groupId": "grupo_1784441100477_nwioj",
       "text": "tarea 1",
       "type": "salida",
       "order": 3
