@@ -272,6 +272,11 @@
   color: #6b7280 !important;
 }
 
+.light-theme .admin-panel-box strong[style*="color: #e2e8f0"],
+.light-theme .admin-panel-box strong[style*="color:#e2e8f0"] {
+  color: #1e293b !important;
+}
+
 .light-theme .admin-panel-box span[style*="font-size: 0.7rem"],
 .light-theme .admin-panel-box span[style*="font-size:0.7rem"] {
   color: #4b5563 !important;
