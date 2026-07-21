@@ -306,10 +306,10 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
                           <span style={{ fontWeight: '600' }}>{g.name}</span>
-                          <div style={{ fontSize: '0.75rem', color: '#9ca3af' }}>{g.memberCount} usuarios | {g.taskCount} tareas</div>
+                          <div style={{ fontSize: '0.85rem', color: '#9ca3af' }}>{g.memberCount} usuarios | {g.taskCount} tareas</div>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <span style={{ color: '#9ca3af', fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
+                          <span style={{ color: '#9ca3af', fontSize: '0.8rem' }}>{isExpanded ? '▲' : '▼'}</span>
                         </div>
                       </div>
                       {isExpanded && (
@@ -317,8 +317,8 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                           {g.members.length > 0 ? (
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '10px' }}>
                               {g.members.map(m => (
-                                <div key={m} style={{ padding: '6px 10px', backgroundColor: 'hsl(var(--background))', borderRadius: '6px', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                  <User size={12} color="#9ca3af" />
+                                <div key={m} style={{ padding: '6px 10px', backgroundColor: 'hsl(var(--background))', borderRadius: '6px', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                  <User size={14} color="#9ca3af" />
                                   <span>{m}</span>
                                 </div>
                               ))}
@@ -327,8 +327,8 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                             <p style={{ color: '#9ca3af', fontSize: '0.75rem', textAlign: 'center', marginBottom: '10px' }}>Sin usuarios</p>
                           )}
                           <div style={{ display: 'flex', gap: '8px' }}>
-                            <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleRenameGroup(g.id, g.name)}><RefreshCcw size={14} /> Renombrar</button>
-                            <button className="nav-item" style={{ color: '#ef4444', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleDeleteGroup(g.id, g.name)}><Trash2 size={14} /> Eliminar</button>
+                            <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleRenameGroup(g.id, g.name)}><RefreshCcw size={14} /> Renombrar</button>
+                            <button className="nav-item" style={{ color: '#ef4444', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleDeleteGroup(g.id, g.name)}><Trash2 size={14} /> Eliminar</button>
                           </div>
                         </div>
                       )}
@@ -432,14 +432,14 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                           {u.role === 'admin' && <span style={{ fontSize: '0.55rem', padding: '1px 5px', borderRadius: '4px', backgroundColor: 'rgba(167,139,250,0.2)', color: '#a78bfa', fontWeight: '700', textTransform: 'uppercase' }}>Admin</span>}
                           {u.role === 'coordinator' && <span style={{ fontSize: '0.55rem', padding: '1px 5px', borderRadius: '4px', backgroundColor: 'rgba(56,189,248,0.2)', color: '#38bdf8', fontWeight: '700', textTransform: 'uppercase' }}>Coord</span>}
                         </div>
-                        <span style={{ fontSize: '0.7rem', color: '#9ca3af' }}>{isExpanded ? '▲' : '▼'}</span>
+                        <span style={{ fontSize: '0.8rem', color: '#9ca3af' }}>{isExpanded ? '▲' : '▼'}</span>
                       </div>
                       {isExpanded && (
                         <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                          <div style={{ fontSize: '0.75rem', color: '#9ca3af', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
+                          <div style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
                           <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
-                            <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => { setEditingPasswordUser(editingPasswordUser === u.id ? null : u.id); setNewUserPassword(''); setError(''); }}><Key size={14} /> Pass</button>
-                            <button className="nav-item" style={{ color: '#ef4444', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleDeleteUser(u.id, u.username)}><Trash2 size={14} /> Eliminar</button>
+                            <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => { setEditingPasswordUser(editingPasswordUser === u.id ? null : u.id); setNewUserPassword(''); setError(''); }}><Key size={14} /> Pass</button>
+                            <button className="nav-item" style={{ color: '#ef4444', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleDeleteUser(u.id, u.username)}><Trash2 size={14} /> Eliminar</button>
                           </div>
                           {editingPasswordUser === u.id && (
                             <div style={{ marginBottom: '8px', display: 'flex', gap: '8px', alignItems: 'center' }}>
@@ -530,30 +530,30 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                   <span style={{ fontWeight: '700', fontSize: '0.9rem' }}>{u.username}</span>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     {u.total === 0 ? (
-                      <span style={{ fontSize: '0.75rem', fontWeight: '600', color: '#f87171' }}>SIN JORNADA</span>
+                      <span style={{ fontSize: '0.85rem', fontWeight: '600', color: '#f87171' }}>SIN JORNADA</span>
                     ) : (
-                      <span style={{ fontSize: '0.8rem', fontWeight: '600', color: u.percent === 100 ? '#34d399' : '#fbbf24' }}>{u.percent}%</span>
+                      <span style={{ fontSize: '0.85rem', fontWeight: '600', color: u.percent === 100 ? '#34d399' : '#fbbf24' }}>{u.percent}%</span>
                     )}
-                    <span style={{ color: '#9ca3af', fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
+                    <span style={{ color: '#9ca3af', fontSize: '0.8rem' }}>{isExpanded ? '▲' : '▼'}</span>
                   </div>
                 </div>
                 {isExpanded && (
                   <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                    <div style={{ fontSize: '0.7rem', color: '#9ca3af', marginBottom: '6px' }}>{u.groupName} | {u.completed}/{u.total} tareas</div>
+                    <div style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '8px' }}>{u.groupName} | {u.completed}/{u.total} tareas</div>
                     {u.total > 0 ? u.tasks.map((t, i) => (
-                      <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 0', fontSize: '0.75rem', borderBottom: i < u.tasks.length - 1 ? '1px solid rgba(255,255,255,0.03)' : 'none' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                          <span className={`task-type-badge ${t.taskType}`} style={{ transform: 'scale(0.7)' }}>{t.taskType}</span>
+                      <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', fontSize: '0.85rem', borderBottom: i < u.tasks.length - 1 ? '1px solid hsl(var(--border))' : 'none' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <span className={`task-type-badge ${t.taskType}`}>{t.taskType}</span>
                           <span>{t.taskText}</span>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                           {t.completed ? (
-                            <><Clock size={10} color="#9ca3af" /><span style={{ fontSize: '0.65rem', color: '#9ca3af' }}>{formatTime(t.completedAt)}</span><Check size={12} color="#34d399" /></>
-                          ) : <X size={12} color="#f87171" />}
+                            <><Clock size={12} color="#9ca3af" /><span style={{ fontSize: '0.75rem', color: '#9ca3af' }}>{formatTime(t.completedAt)}</span><Check size={14} color="#34d399" /></>
+                          ) : <X size={14} color="#f87171" />}
                         </div>
                       </div>
                     )) : (
-                      <p style={{ color: '#9ca3af', fontSize: '0.75rem', textAlign: 'center', padding: '6px' }}>No se iniciaron tareas.</p>
+                      <p style={{ color: '#9ca3af', fontSize: '0.85rem', textAlign: 'center', padding: '8px' }}>No se iniciaron tareas.</p>
                     )}
                   </div>
                 )}
