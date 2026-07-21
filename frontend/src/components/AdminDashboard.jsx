@@ -253,26 +253,26 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                   </div>
                   {isExpanded && (
                     <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                      <div style={{ fontSize: '0.75rem', color: '#9ca3af', marginBottom: '6px' }}>{u.groupName}</div>
-                      <div style={{ display: 'flex', gap: '16px', marginBottom: '8px' }}>
+                      <div style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '8px' }}>{u.groupName}</div>
+                      <div style={{ display: 'flex', gap: '16px', marginBottom: '10px' }}>
                         <div className="user-stat-row"><span>Ingreso</span><span style={{ color: u.stats.completedEntrada === u.stats.totalEntrada && u.stats.totalEntrada > 0 ? '#34d399' : 'inherit' }}>{u.stats.completedEntrada}/{u.stats.totalEntrada}</span></div>
                         <div className="user-stat-row"><span>Egreso</span><span style={{ color: u.stats.completedSalida === u.stats.totalSalida && u.stats.totalSalida > 0 ? '#34d399' : 'inherit' }}>{u.stats.completedSalida}/{u.stats.totalSalida}</span></div>
                       </div>
                       {u.tasks && u.tasks.length > 0 && (
-                        <div style={{ marginBottom: '8px' }}>
+                        <div style={{ marginBottom: '10px' }}>
                           {u.tasks.map((t, i) => (
-                            <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 0', fontSize: '0.75rem', borderBottom: i < u.tasks.length - 1 ? '1px solid rgba(255,255,255,0.03)' : 'none' }}>
-                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                                <span className={`task-type-badge ${t.type}`} style={{ transform: 'scale(0.7)' }}>{t.type}</span>
+                            <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', fontSize: '0.85rem', borderBottom: i < u.tasks.length - 1 ? '1px solid hsl(var(--border))' : 'none' }}>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                <span className={`task-type-badge ${t.type}`}>{t.type}</span>
                                 <span>{t.text}</span>
                               </div>
-                              {t.completed ? <Check size={12} color="#34d399" /> : <X size={12} color="#f87171" />}
+                              {t.completed ? <Check size={14} color="#34d399" /> : <X size={14} color="#f87171" />}
                             </div>
                           ))}
                         </div>
                       )}
                       <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
-                        <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleResetUser(u.id, u.username)} title="Reiniciar"><RefreshCcw size={14} /> Reiniciar</button>
+                        <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleResetUser(u.id, u.username)} title="Reiniciar"><RefreshCcw size={14} /> Reiniciar</button>
                       </div>
                     </div>
                   )}
