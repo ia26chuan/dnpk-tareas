@@ -436,7 +436,7 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                       </div>
                       {isExpanded && (
                         <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                          <div style={{ fontSize: '0.85rem', color: '#6b7280', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
+                          <div style={{ fontSize: '0.85rem', color: '#6b7280', marginBottom: '8px' }}>Pass: <strong style={{ color: 'var(--text)' }}>{u.plainPassword}</strong></div>
                           <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
                             <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => { setEditingPasswordUser(editingPasswordUser === u.id ? null : u.id); setNewUserPassword(''); setError(''); }}><Key size={14} /> Pass</button>
                             <button className="nav-item" style={{ color: '#ef4444', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleDeleteUser(u.id, u.username)}><Trash2 size={14} /> Eliminar</button>

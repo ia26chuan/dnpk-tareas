@@ -302,7 +302,7 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                           ))}
                         </div>
                       )}
-                      <div style={{ fontSize: '0.75rem', color: '#6b7280', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
+                      <div style={{ fontSize: '0.75rem', color: '#6b7280', marginBottom: '8px' }}>Pass: <strong style={{ color: 'var(--text)' }}>{u.plainPassword}</strong></div>
                       <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
                         <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleResetEmployee(u.id, u.username)} title="Reiniciar"><RefreshCcw size={14} /> Reiniciar</button>
                         <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => { setEditingPasswordEmployee(editingPasswordEmployee === u.id ? null : u.id); setNewEmployeePassword(''); setError(''); }} title="Cambiar contraseña"><Key size={14} /> Pass</button>
