@@ -271,7 +271,6 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                           ))}
                         </div>
                       )}
-                      <div style={{ fontSize: '0.75rem', color: '#9ca3af', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
                       <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
                         <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleResetUser(u.id, u.username)} title="Reiniciar"><RefreshCcw size={14} /> Reiniciar</button>
                       </div>
