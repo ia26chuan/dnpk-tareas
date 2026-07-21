@@ -178,7 +178,7 @@
 }
 
 .light-theme .task-item.completed .task-text {
-  color: #9ca3af;
+  color: #6b7280;
 }
 
 .light-theme .task-checkbox-container {
@@ -268,7 +268,7 @@
   color: #6d28d9 !important;
 }
 
-.light-theme .admin-panel-box div[style*="color: #9ca3af"] {
+.light-theme .admin-panel-box div[style*="color: #6b7280"] {
   color: #6b7280 !important;
 }
 
@@ -781,7 +781,7 @@ body {
 
 .status-badge.not-started {
   background-color: rgba(107, 114, 128, 0.1);
-  color: #9ca3af;
+  color: #6b7280;
 }
 
 .user-stat-row {
@@ -949,7 +949,7 @@ body {
 
 .password-label {
   font-size: 0.75rem;
-  color: #9ca3af;
+  color: #6b7280;
 }
 
 .password-value {

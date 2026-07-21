@@ -109,7 +109,7 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
     return (
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%', gap: '16px', padding: '40px' }}>
         <RefreshCcw size={32} color="#8b5cf6" style={{ animation: 'spin 1s linear infinite' }} />
-        <p style={{ color: '#9ca3af', fontSize: '0.9rem' }}>Cargando tus tareas...</p>
+        <p style={{ color: '#6b7280', fontSize: '0.9rem' }}>Cargando tus tareas...</p>
       </div>
     );
   }
@@ -187,8 +187,8 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                   <span className="profile-username">Hola, {user.username}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <Calendar size={14} color="#9ca3af" />
-                  <span style={{ fontSize: '0.8rem', color: '#9ca3af' }}>
+                  <Calendar size={14} color="#6b7280" />
+                  <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>
                     {new Date().toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
                   </span>
                 </div>
@@ -215,7 +215,7 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                 <div>
                   <h2 className="section-title"><Unlock size={16} color="#34d399" /> Tareas de Ingreso</h2>
                   {entradaTasks.length === 0 ? (
-                    <p style={{ color: '#9ca3af', fontSize: '0.85rem', padding: '12px' }}>No tenes tareas de ingreso.</p>
+                    <p style={{ color: '#6b7280', fontSize: '0.85rem', padding: '12px' }}>No tenes tareas de ingreso.</p>
                   ) : (
                     <div className="tasks-list">
                       {entradaTasks.map(task => (
@@ -229,7 +229,7 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                 </div>
                 <div style={{ marginTop: '10px' }}>
                   <h2 className="section-title">
-                    {allEntradaCompleted ? <Unlock size={16} color="#a78bfa" /> : <Lock size={16} color="#9ca3af" />}
+                    {allEntradaCompleted ? <Unlock size={16} color="#a78bfa" /> : <Lock size={16} color="#6b7280" />}
                     Tareas de Egreso
                   </h2>
                   {!allEntradaCompleted ? (
@@ -241,7 +241,7 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                   ) : (
                     <div className="tasks-list">
                       {salidaTasks.length === 0 ? (
-                        <p style={{ color: '#9ca3af', fontSize: '0.85rem', padding: '12px' }}>No tenes tareas de egreso.</p>
+                        <p style={{ color: '#6b7280', fontSize: '0.85rem', padding: '12px' }}>No tenes tareas de egreso.</p>
                       ) : (
                         salidaTasks.map(task => (
                           <div key={task.id} className={`task-item ${task.completed ? 'completed' : ''}`} onClick={() => handleToggleTask(task)}>
@@ -262,7 +262,7 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
         {activeTab === 'monitor' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {sortedMonitorUsers.length === 0 ? (
-              <p style={{ textAlign: 'center', color: '#9ca3af', padding: '24px', fontSize: '0.9rem' }}>No hay usuarios.</p>
+              <p style={{ textAlign: 'center', color: '#6b7280', padding: '24px', fontSize: '0.9rem' }}>No hay usuarios.</p>
             ) : sortedMonitorUsers.map(u => {
               const total = u.stats.totalEntrada + u.stats.totalSalida;
               const completed = u.stats.completedEntrada + u.stats.completedSalida;
@@ -279,12 +279,12 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <span className={`status-badge ${statusClass}`}>{statusLabel}</span>
-                      <span style={{ color: '#9ca3af', fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
+                      <span style={{ color: '#6b7280', fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
                     </div>
                   </div>
                   {isExpanded && (
                     <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                      <div style={{ fontSize: '0.75rem', color: '#9ca3af', marginBottom: '6px' }}>{u.groupName}</div>
+                      <div style={{ fontSize: '0.75rem', color: '#6b7280', marginBottom: '6px' }}>{u.groupName}</div>
                       <div style={{ display: 'flex', gap: '16px', marginBottom: '8px' }}>
                         <div className="user-stat-row"><span>Ingreso</span><span style={{ color: u.stats.completedEntrada === u.stats.totalEntrada && u.stats.totalEntrada > 0 ? '#34d399' : 'inherit' }}>{u.stats.completedEntrada}/{u.stats.totalEntrada}</span></div>
                         <div className="user-stat-row"><span>Egreso</span><span style={{ color: u.stats.completedSalida === u.stats.totalSalida && u.stats.totalSalida > 0 ? '#34d399' : 'inherit' }}>{u.stats.completedSalida}/{u.stats.totalSalida}</span></div>
@@ -302,7 +302,7 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                           ))}
                         </div>
                       )}
-                      <div style={{ fontSize: '0.75rem', color: '#9ca3af', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
+                      <div style={{ fontSize: '0.75rem', color: '#6b7280', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
                       <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
                         <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleResetEmployee(u.id, u.username)} title="Reiniciar"><RefreshCcw size={14} /> Reiniciar</button>
                         <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => { setEditingPasswordEmployee(editingPasswordEmployee === u.id ? null : u.id); setNewEmployeePassword(''); setError(''); }} title="Cambiar contraseña"><Key size={14} /> Pass</button>
@@ -358,7 +358,7 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
             </div>
 
             {historyData.length === 0 ? (
-              <p style={{ color: '#9ca3af', fontSize: '0.85rem', textAlign: 'center', padding: '12px' }}>Sin datos para esta fecha.</p>
+              <p style={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center', padding: '12px' }}>Sin datos para esta fecha.</p>
             ) : historyData.sort((a, b) => a.username.localeCompare(b.username)).map(u => {
               const isExpanded = expandedUser === `hist-${u.userId}`;
               return (
@@ -371,12 +371,12 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                     ) : (
                       <span style={{ fontSize: '0.8rem', fontWeight: '600', color: u.percent === 100 ? '#34d399' : '#fbbf24' }}>{u.percent}%</span>
                     )}
-                    <span style={{ color: '#9ca3af', fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
+                    <span style={{ color: '#6b7280', fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
                   </div>
                 </div>
                 {isExpanded && (
                   <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                    <div style={{ fontSize: '0.7rem', color: '#9ca3af', marginBottom: '6px' }}>{u.groupName} | {u.completed}/{u.total} tareas</div>
+                    <div style={{ fontSize: '0.7rem', color: '#6b7280', marginBottom: '6px' }}>{u.groupName} | {u.completed}/{u.total} tareas</div>
                     {u.total > 0 ? u.tasks.map((t, i) => (
                       <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 0', fontSize: '0.75rem', borderBottom: i < u.tasks.length - 1 ? '1px solid rgba(255,255,255,0.03)' : 'none' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
@@ -385,12 +385,12 @@ export default function CoordinatorDashboard({ user, onLogout, toggleTheme, dark
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
                           {t.completed ? (
-                            <><Clock size={10} color="#9ca3af" /><span style={{ fontSize: '0.65rem', color: '#9ca3af' }}>{formatTime(t.completedAt)}</span><Check size={12} color="#34d399" /></>
+                            <><Clock size={10} color="#6b7280" /><span style={{ fontSize: '0.65rem', color: '#6b7280' }}>{formatTime(t.completedAt)}</span><Check size={12} color="#34d399" /></>
                           ) : <X size={12} color="#f87171" />}
                         </div>
                       </div>
                     )) : (
-                      <p style={{ color: '#9ca3af', fontSize: '0.75rem', textAlign: 'center', padding: '6px' }}>No se iniciaron tareas.</p>
+                      <p style={{ color: '#6b7280', fontSize: '0.75rem', textAlign: 'center', padding: '6px' }}>No se iniciaron tareas.</p>
                     )}
                   </div>
                 )}

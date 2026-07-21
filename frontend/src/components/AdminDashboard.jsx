@@ -231,7 +231,7 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
         {activeTab === 'monitor' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {normalUsers.length === 0 ? (
-              <p style={{ textAlign: 'center', color: '#9ca3af', padding: '24px', fontSize: '0.9rem' }}>No hay usuarios.</p>
+              <p style={{ textAlign: 'center', color: '#6b7280', padding: '24px', fontSize: '0.9rem' }}>No hay usuarios.</p>
             ) : normalUsers.map(u => {
               const total = u.stats.totalEntrada + u.stats.totalSalida;
               const completed = u.stats.completedEntrada + u.stats.completedSalida;
@@ -248,12 +248,12 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <span className={`status-badge ${statusClass}`}>{statusLabel}</span>
-                      <span style={{ color: '#9ca3af', fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
+                      <span style={{ color: '#6b7280', fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
                     </div>
                   </div>
                   {isExpanded && (
                     <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                      <div style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '8px' }}>{u.groupName}</div>
+                      <div style={{ fontSize: '0.85rem', color: '#6b7280', marginBottom: '8px' }}>{u.groupName}</div>
                       <div style={{ display: 'flex', gap: '16px', marginBottom: '10px' }}>
                         <div className="user-stat-row"><span>Ingreso</span><span style={{ color: u.stats.completedEntrada === u.stats.totalEntrada && u.stats.totalEntrada > 0 ? '#34d399' : 'inherit' }}>{u.stats.completedEntrada}/{u.stats.totalEntrada}</span></div>
                         <div className="user-stat-row"><span>Egreso</span><span style={{ color: u.stats.completedSalida === u.stats.totalSalida && u.stats.totalSalida > 0 ? '#34d399' : 'inherit' }}>{u.stats.completedSalida}/{u.stats.totalSalida}</span></div>
@@ -296,7 +296,7 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
             <div className="admin-panel-box">
               <h3 style={{ fontSize: '0.95rem', fontWeight: '700', marginBottom: '8px' }}>Grupos ({groups.length})</h3>
               {groups.length === 0 ? (
-                <p style={{ color: '#9ca3af', fontSize: '0.85rem', textAlign: 'center' }}>No hay grupos creados.</p>
+                <p style={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center' }}>No hay grupos creados.</p>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {sortedGroups.map(g => {
@@ -306,10 +306,10 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
                           <span style={{ fontWeight: '600' }}>{g.name}</span>
-                          <div style={{ fontSize: '0.85rem', color: '#9ca3af' }}>{g.memberCount} usuarios | {g.taskCount} tareas</div>
+                          <div style={{ fontSize: '0.85rem', color: '#6b7280' }}>{g.memberCount} usuarios | {g.taskCount} tareas</div>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <span style={{ color: '#9ca3af', fontSize: '0.8rem' }}>{isExpanded ? '▲' : '▼'}</span>
+                          <span style={{ color: '#6b7280', fontSize: '0.8rem' }}>{isExpanded ? '▲' : '▼'}</span>
                         </div>
                       </div>
                       {isExpanded && (
@@ -318,13 +318,13 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '10px' }}>
                               {g.members.map(m => (
                                 <div key={m} style={{ padding: '6px 10px', backgroundColor: 'hsl(var(--background))', borderRadius: '6px', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                  <User size={14} color="#9ca3af" />
+                                  <User size={14} color="#6b7280" />
                                   <span>{m}</span>
                                 </div>
                               ))}
                             </div>
                           ) : (
-                            <p style={{ color: '#9ca3af', fontSize: '0.75rem', textAlign: 'center', marginBottom: '10px' }}>Sin usuarios</p>
+                            <p style={{ color: '#6b7280', fontSize: '0.75rem', textAlign: 'center', marginBottom: '10px' }}>Sin usuarios</p>
                           )}
                           <div style={{ display: 'flex', gap: '8px' }}>
                             <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleRenameGroup(g.id, g.name)}><RefreshCcw size={14} /> Renombrar</button>
@@ -363,7 +363,7 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                 <div className="admin-panel-box">
                   <h3 style={{ fontSize: '0.95rem', fontWeight: '700', marginBottom: '8px' }}>Tareas ({groupTasks.length})</h3>
                   {groupTasks.length === 0 ? (
-                    <p style={{ color: '#9ca3af', fontSize: '0.85rem', textAlign: 'center' }}>Sin tareas.</p>
+                    <p style={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center' }}>Sin tareas.</p>
                   ) : (
                     <div className="tasks-admin-list">
                       {groupTasks.map(t => (
@@ -419,7 +419,7 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
             <div className="admin-panel-box">
               <h3 style={{ fontSize: '0.95rem', fontWeight: '700', marginBottom: '8px' }}>Usuarios ({normalUsers.length})</h3>
               {normalUsers.length === 0 ? (
-                <p style={{ color: '#9ca3af', fontSize: '0.85rem', textAlign: 'center' }}>No hay usuarios.</p>
+                <p style={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center' }}>No hay usuarios.</p>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                   {normalUsers.map(u => {
@@ -432,11 +432,11 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                           {u.role === 'admin' && <span style={{ fontSize: '0.55rem', padding: '1px 5px', borderRadius: '4px', backgroundColor: 'rgba(167,139,250,0.2)', color: '#a78bfa', fontWeight: '700', textTransform: 'uppercase' }}>Admin</span>}
                           {u.role === 'coordinator' && <span style={{ fontSize: '0.55rem', padding: '1px 5px', borderRadius: '4px', backgroundColor: 'rgba(56,189,248,0.2)', color: '#38bdf8', fontWeight: '700', textTransform: 'uppercase' }}>Coord</span>}
                         </div>
-                        <span style={{ fontSize: '0.8rem', color: '#9ca3af' }}>{isExpanded ? '▲' : '▼'}</span>
+                        <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>{isExpanded ? '▲' : '▼'}</span>
                       </div>
                       {isExpanded && (
                         <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                          <div style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
+                          <div style={{ fontSize: '0.85rem', color: '#6b7280', marginBottom: '8px' }}>Pass: <strong style={{ color: '#e2e8f0' }}>{u.plainPassword}</strong></div>
                           <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
                             <button className="nav-item" style={{ color: '#a78bfa', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => { setEditingPasswordUser(editingPasswordUser === u.id ? null : u.id); setNewUserPassword(''); setError(''); }}><Key size={14} /> Pass</button>
                             <button className="nav-item" style={{ color: '#ef4444', padding: '6px 10px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px' }} onClick={() => handleDeleteUser(u.id, u.username)}><Trash2 size={14} /> Eliminar</button>
@@ -521,7 +521,7 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
             </div>
 
             {historyData.length === 0 ? (
-              <p style={{ color: '#9ca3af', fontSize: '0.85rem', textAlign: 'center', padding: '12px' }}>Sin datos para esta fecha.</p>
+              <p style={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center', padding: '12px' }}>Sin datos para esta fecha.</p>
             ) : historyData.sort((a, b) => a.username.localeCompare(b.username)).map(u => {
               const isExpanded = expandedUser === `hist-${u.userId}`;
               return (
@@ -534,12 +534,12 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                     ) : (
                       <span style={{ fontSize: '0.85rem', fontWeight: '600', color: u.percent === 100 ? '#34d399' : '#fbbf24' }}>{u.percent}%</span>
                     )}
-                    <span style={{ color: '#9ca3af', fontSize: '0.8rem' }}>{isExpanded ? '▲' : '▼'}</span>
+                    <span style={{ color: '#6b7280', fontSize: '0.8rem' }}>{isExpanded ? '▲' : '▼'}</span>
                   </div>
                 </div>
                 {isExpanded && (
                   <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid hsl(var(--border))' }} onClick={e => e.stopPropagation()}>
-                    <div style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '8px' }}>{u.groupName} | {u.completed}/{u.total} tareas</div>
+                    <div style={{ fontSize: '0.85rem', color: '#6b7280', marginBottom: '8px' }}>{u.groupName} | {u.completed}/{u.total} tareas</div>
                     {u.total > 0 ? u.tasks.map((t, i) => (
                       <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', fontSize: '0.85rem', borderBottom: i < u.tasks.length - 1 ? '1px solid hsl(var(--border))' : 'none' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -548,12 +548,12 @@ export default function AdminDashboard({ onLogout, toggleTheme, darkMode }) {
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                           {t.completed ? (
-                            <><Clock size={12} color="#9ca3af" /><span style={{ fontSize: '0.75rem', color: '#9ca3af' }}>{formatTime(t.completedAt)}</span><Check size={14} color="#34d399" /></>
+                            <><Clock size={12} color="#6b7280" /><span style={{ fontSize: '0.75rem', color: '#6b7280' }}>{formatTime(t.completedAt)}</span><Check size={14} color="#34d399" /></>
                           ) : <X size={14} color="#f87171" />}
                         </div>
                       </div>
                     )) : (
-                      <p style={{ color: '#9ca3af', fontSize: '0.85rem', textAlign: 'center', padding: '8px' }}>No se iniciaron tareas.</p>
+                      <p style={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center', padding: '8px' }}>No se iniciaron tareas.</p>
                     )}
                   </div>
                 )}

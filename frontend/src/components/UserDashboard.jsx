@@ -70,7 +70,7 @@ export default function UserDashboard({ user, onLogout, toggleTheme, darkMode })
     return (
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%', gap: '16px', padding: '40px' }}>
         <RefreshCw size={32} color="#8b5cf6" style={{ animation: 'spin 1s linear infinite' }} />
-        <p style={{ color: '#9ca3af', fontSize: '0.9rem' }}>Cargando tus tareas...</p>
+        <p style={{ color: '#6b7280', fontSize: '0.9rem' }}>Cargando tus tareas...</p>
       </div>
     );
   }
@@ -133,7 +133,7 @@ export default function UserDashboard({ user, onLogout, toggleTheme, darkMode })
           <>
             <h2 className="section-title"><History size={16} color="#a78bfa" /> Historial de Jornadas</h2>
             {history.length === 0 ? (
-              <p style={{ color: '#9ca3af', fontSize: '0.85rem', padding: '12px' }}>No hay historial todavia.</p>
+              <p style={{ color: '#6b7280', fontSize: '0.85rem', padding: '12px' }}>No hay historial todavia.</p>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {history.map(day => (
@@ -147,14 +147,14 @@ export default function UserDashboard({ user, onLogout, toggleTheme, darkMode })
                       )}
                     </div>
                     {day.total === 0 ? (
-                      <p style={{ color: '#9ca3af', fontSize: '0.8rem', textAlign: 'center', padding: '8px' }}>No se iniciaron tareas.</p>
+                      <p style={{ color: '#6b7280', fontSize: '0.8rem', textAlign: 'center', padding: '8px' }}>No se iniciaron tareas.</p>
                     ) : day.tasks.map((t, i) => (
                       <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.05)', fontSize: '0.8rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                           <span className={`task-type-badge ${t.taskType}`} style={{ transform: 'scale(0.8)' }}>{t.taskType}</span>
                           <span>{t.taskText}</span>
                         </div>
-                        {t.completed ? <Check size={14} color="#34d399" /> : <span style={{ color: '#9ca3af' }}>-</span>}
+                        {t.completed ? <Check size={14} color="#34d399" /> : <span style={{ color: '#6b7280' }}>-</span>}
                       </div>
                     ))}
                   </div>
@@ -173,8 +173,8 @@ export default function UserDashboard({ user, onLogout, toggleTheme, darkMode })
                   <span className="profile-username">Hola, {user.username}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <Calendar size={14} color="#9ca3af" />
-                  <span style={{ fontSize: '0.8rem', color: '#9ca3af' }}>
+                  <Calendar size={14} color="#6b7280" />
+                  <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>
                     {new Date().toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
                   </span>
                 </div>
@@ -210,7 +210,7 @@ export default function UserDashboard({ user, onLogout, toggleTheme, darkMode })
                 <div>
                   <h2 className="section-title"><Unlock size={16} color="#34d399" /> Tareas de Ingreso</h2>
                   {entradaTasks.length === 0 ? (
-                    <p style={{ color: '#9ca3af', fontSize: '0.85rem', padding: '12px' }}>No tenes tareas de ingreso.</p>
+                    <p style={{ color: '#6b7280', fontSize: '0.85rem', padding: '12px' }}>No tenes tareas de ingreso.</p>
                   ) : (
                     <div className="tasks-list">
                       {entradaTasks.map(task => (
@@ -224,7 +224,7 @@ export default function UserDashboard({ user, onLogout, toggleTheme, darkMode })
                 </div>
                 <div style={{ marginTop: '10px' }}>
                   <h2 className="section-title">
-                    {allEntradaCompleted ? <Unlock size={16} color="#a78bfa" /> : <Lock size={16} color="#9ca3af" />}
+                    {allEntradaCompleted ? <Unlock size={16} color="#a78bfa" /> : <Lock size={16} color="#6b7280" />}
                     Tareas de Egreso
                   </h2>
                   {!allEntradaCompleted ? (
@@ -236,7 +236,7 @@ export default function UserDashboard({ user, onLogout, toggleTheme, darkMode })
                   ) : (
                     <div className="tasks-list">
                       {salidaTasks.length === 0 ? (
-                        <p style={{ color: '#9ca3af', fontSize: '0.85rem', padding: '12px' }}>No tenes tareas de egreso.</p>
+                        <p style={{ color: '#6b7280', fontSize: '0.85rem', padding: '12px' }}>No tenes tareas de egreso.</p>
                       ) : (
                         salidaTasks.map(task => (
                           <div key={task.id} className={`task-item ${task.completed ? 'completed' : ''}`} onClick={() => handleToggleTask(task)}>

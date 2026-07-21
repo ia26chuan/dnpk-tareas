@@ -55,7 +55,7 @@ export default function Login({ onLoginSuccess, toggleTheme, darkMode }) {
         <div className="form-group">
           <label className="form-label" htmlFor="username">Usuario</label>
           <div style={{ position: 'relative' }}>
-            <User size={18} color="#9ca3af" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
+            <User size={18} color="#6b7280" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
             <input
               id="username"
               type="email"
@@ -73,7 +73,7 @@ export default function Login({ onLoginSuccess, toggleTheme, darkMode }) {
         <div className="form-group">
           <label className="form-label" htmlFor="password">Contraseña</label>
           <div style={{ position: 'relative' }}>
-            <Lock size={18} color="#9ca3af" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
+            <Lock size={18} color="#6b7280" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
             <input
               id="password"
               type="password"
